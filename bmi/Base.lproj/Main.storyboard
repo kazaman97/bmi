@@ -63,10 +63,10 @@
             </objects>
             <point key="canvasLocation" x="750" y="-320"/>
         </scene>
-        <!--View Controller-->
+        <!--Result View Controller-->
         <scene sceneID="m3W-Vv-vcb">
             <objects>
-                <viewController id="gIl-zg-hct" sceneMemberID="viewController">
+                <viewController id="gIl-zg-hct" customClass="ResultViewController" customModule="bmi" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="HLK-0j-4Tf"/>
                         <viewControllerLayoutGuide type="bottom" id="7Fs-cM-UPc"/>
@@ -153,6 +153,9 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="BMIとは" image="second" id="cPa-gy-q4n"/>
+                    <connections>
+                        <outlet property="webView" destination="bEI-fO-ykr" id="jls-fx-7jq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
