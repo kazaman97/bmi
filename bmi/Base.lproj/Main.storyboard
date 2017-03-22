@@ -9,59 +9,90 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--BMI測定-->
-        <scene sceneID="hNz-n2-bh7">
+        <!--Bmi View Controller-->
+        <scene sceneID="iaB-yd-beB">
             <objects>
-                <viewController id="9pv-A4-QxB" customClass="FirstViewController" customModule="bmi" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="6M4-vW-t5j" customClass="BmiViewController" customModule="bmi" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Ia1-K6-d13"/>
-                        <viewControllerLayoutGuide type="bottom" id="4ug-Mw-9AY"/>
+                        <viewControllerLayoutGuide type="top" id="GIf-bK-yyd"/>
+                        <viewControllerLayoutGuide type="bottom" id="hes-FY-l2p"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
+                    <view key="view" contentMode="scaleToFill" id="paz-3a-3hA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="身長" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kaL-2v-sMI">
-                                <rect key="frame" x="137.5" y="100" width="100" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="身長" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dbw-p2-K4g">
+                                <rect key="frame" x="137.5" y="134" width="100" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="Hnt-a7-Rg6"/>
+                                    <constraint firstAttribute="width" constant="100" id="OhT-cJ-7Rc"/>
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="体重" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wRV-3G-3p2">
-                                <rect key="frame" x="137.5" y="185" width="100" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="体重" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jcV-IU-HUt">
+                                <rect key="frame" x="137.5" y="224" width="100" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="7QX-ju-QPR"/>
+                                    <constraint firstAttribute="width" constant="100" id="2Y8-nI-8e6"/>
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KWw-33-ETA">
-                                <rect key="frame" x="159" y="355" width="57" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hTn-Ax-ubz">
+                                <rect key="frame" x="159" y="394" width="57" height="30"/>
                                 <state key="normal" title="BMI測定"/>
                                 <connections>
-                                    <segue destination="gIl-zg-hct" kind="show" id="ayv-7d-6En"/>
+                                    <action selector="bmiButton:" destination="6M4-vW-t5j" eventType="touchUpInside" id="fRq-FP-gIM"/>
+                                    <segue destination="gIl-zg-hct" kind="show" identifier="toResultViewController" id="UWx-21-rd2"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="kaL-2v-sMI" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="80" id="D7K-18-jrb"/>
-                            <constraint firstItem="wRV-3G-3p2" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="TkN-ii-dbv"/>
-                            <constraint firstItem="wRV-3G-3p2" firstAttribute="top" secondItem="kaL-2v-sMI" secondAttribute="bottom" constant="55" id="Ufg-il-7mX"/>
-                            <constraint firstItem="KWw-33-ETA" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="Wqv-q4-4wH"/>
-                            <constraint firstItem="KWw-33-ETA" firstAttribute="top" secondItem="wRV-3G-3p2" secondAttribute="bottom" constant="140" id="cNp-4s-2aq"/>
-                            <constraint firstItem="kaL-2v-sMI" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="tZf-oa-uMu"/>
+                            <constraint firstItem="jcV-IU-HUt" firstAttribute="centerX" secondItem="paz-3a-3hA" secondAttribute="centerX" id="6FJ-3k-WIU"/>
+                            <constraint firstItem="hTn-Ax-ubz" firstAttribute="centerX" secondItem="paz-3a-3hA" secondAttribute="centerX" id="9Mo-46-SYE"/>
+                            <constraint firstItem="hTn-Ax-ubz" firstAttribute="top" secondItem="jcV-IU-HUt" secondAttribute="bottom" constant="140" id="ZvK-6Z-8kv"/>
+                            <constraint firstItem="jcV-IU-HUt" firstAttribute="top" secondItem="Dbw-p2-K4g" secondAttribute="bottom" constant="60" id="acF-co-s4t"/>
+                            <constraint firstItem="Dbw-p2-K4g" firstAttribute="top" secondItem="paz-3a-3hA" secondAttribute="top" constant="134" id="feY-UT-Lnp"/>
+                            <constraint firstItem="Dbw-p2-K4g" firstAttribute="centerX" secondItem="paz-3a-3hA" secondAttribute="centerX" id="ffQ-V3-QeE"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Jum-ra-9rR" appends="YES" id="dFR-zH-XK2"/>
+                        </connections>
                     </view>
-                    <tabBarItem key="tabBarItem" title="BMI測定" image="first" id="acW-dT-cKf"/>
+                    <navigationItem key="navigationItem" id="2SX-ch-udw"/>
+                    <connections>
+                        <outlet property="heightTextField" destination="Dbw-p2-K4g" id="DzZ-mu-jct"/>
+                        <outlet property="weightTextField" destination="jcV-IU-HUt" id="wnI-rP-Dn0"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f5z-9C-lL1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Jum-ra-9rR">
+                    <connections>
+                        <action selector="tapScreen:" destination="6M4-vW-t5j" id="mFG-sY-cZ5"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="750" y="-320"/>
+            <point key="canvasLocation" x="1954" y="-394"/>
+        </scene>
+        <!--BMI測定-->
+        <scene sceneID="vpM-u8-6yj">
+            <objects>
+                <navigationController id="kdR-JY-Zp2" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="BMI測定" selectedImage="first" id="y7k-9d-ct8"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="4IC-hv-Oez">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="6M4-vW-t5j" kind="relationship" relationship="rootViewController" id="lXA-Gy-NKV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0uI-XQ-OCF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="814" y="-392"/>
         </scene>
         <!--Result View Controller-->
         <scene sceneID="m3W-Vv-vcb">
@@ -76,31 +107,31 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BMI" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Caj-aL-gq4">
-                                <rect key="frame" x="172" y="85" width="30" height="21"/>
+                                <rect key="frame" x="172.5" y="129" width="30" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BMI指数" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wge-wM-h0O">
-                                <rect key="frame" x="155" y="151" width="65" height="21"/>
+                                <rect key="frame" x="155" y="195" width="65" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="標準体重" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ifw-O3-PQd">
-                                <rect key="frame" x="152" y="247" width="70" height="21"/>
+                                <rect key="frame" x="152.5" y="291" width="70" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="標準体重数" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t1f-4S-ss8">
-                                <rect key="frame" x="144" y="323" width="87" height="21"/>
+                                <rect key="frame" x="144" y="367" width="87" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BMIによる結果" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VYR-O4-axs">
-                                <rect key="frame" x="129" y="444" width="117" height="21"/>
+                                <rect key="frame" x="129" y="488" width="117" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -121,10 +152,15 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="1wq-WV-Wpf"/>
+                    <connections>
+                        <outlet property="bmiLabel" destination="wge-wM-h0O" id="OvJ-BN-0tq"/>
+                        <outlet property="resultLabel" destination="VYR-O4-axs" id="B3r-Zy-iGd"/>
+                        <outlet property="sbwLabel" destination="t1f-4S-ss8" id="r5p-5Y-rNW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tw3-uq-NGx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1716" y="-321"/>
+            <point key="canvasLocation" x="3097" y="-394"/>
         </scene>
         <!--BMIとは-->
         <scene sceneID="wg7-f3-ORb">
@@ -159,7 +195,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="749.60000000000002" y="359.37031484257875"/>
+            <point key="canvasLocation" x="814" y="358"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -172,7 +208,7 @@
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
-                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
+                        <segue destination="kdR-JY-Zp2" kind="relationship" relationship="viewControllers" id="pYN-1H-LVY"/>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
                     </connections>
                 </tabBarController>

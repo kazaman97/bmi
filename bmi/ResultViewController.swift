@@ -9,6 +9,9 @@
 import UIKit
 
 class ResultViewController: UIViewController {
+    @IBOutlet weak var bmiLabel: UILabel!
+    @IBOutlet weak var sbwLabel: UILabel!
+    @IBOutlet weak var resultLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
