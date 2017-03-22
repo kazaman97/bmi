@@ -12,10 +12,12 @@ class ResultViewController: UIViewController {
     @IBOutlet weak var bmiLabel: UILabel!
     @IBOutlet weak var sbwLabel: UILabel!
     @IBOutlet weak var resultLabel: UILabel!
+    var bmi = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        bmiLabel.text = String(bmi)
     }
 
     override func didReceiveMemoryWarning() {

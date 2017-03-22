@@ -11,13 +11,16 @@ import UIKit
 class BmiViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var heightTextField: UITextField!
     @IBOutlet weak var weightTextField: UITextField!
+
+    var bmi = 0.0
+    var sbw = 0.0
     
     
     @IBAction func bmiButton(_ sender: Any) {
         let height: Double = Double(heightTextField.text!)!
         let weight: Double = Double(weightTextField.text!)!
-        let bmi = weight/(height*height)
-        let sbw = (height*height)*22
+        bmi = weight/(height*height)
+        sbw = (height*height)*22
         
         print(bmi)
         print(sbw)
@@ -55,7 +58,7 @@ class BmiViewController: UIViewController, UITextFieldDelegate {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toResultViewController" {
             let resultViewController = segue.destination as! ResultViewController
-            // ここにbmiとsbwの値をResultViewに送る処理を書きたい
+            
         }
         
     }
